@@ -1,10 +1,3 @@
-# Here we have fleshed out our infracstructure and added out a load
-# balancer that we can add infrastructure to.
-
-# Then we ran a container AWS FARGATE.
-# FARGATE is a service that enables a user to run containers on amazon's cloud 
-# computing PLATFORM without the need to manage the underlaying infracstructure.
-
 import pulumi
 import pulumi_aws as aws
 import json
