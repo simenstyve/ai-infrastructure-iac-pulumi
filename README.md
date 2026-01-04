@@ -1,7 +1,7 @@
-# ai-infrastructure-iac-pulumi
+# Enterprise AI Infrastructure: Secure Cloud Foundation (IaC)
 
-Enterprise AI Infrastructure: Secure Cloud Foundation (IaC)
 Strategic Overview
+
 This repository provides a production-grade Infrastructure-as-Code (IaC) framework for hosting AI and machine learning workloads securely. Utilizing Pulumi (Python) and AWS, it automates the deployment of a hardened, scalable environment designed to protect sensitive data while ensuring high availability for AI services.
 
 For mission-driven organizations like Human Rights Watch, this architecture provides a "Secure-by-Design" foundation. It ensures that investigative tools and data-sensitive models are hosted in a private, auditable environment that meets international data sovereignty and security standards.
