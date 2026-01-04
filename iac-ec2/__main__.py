@@ -3,44 +3,6 @@ from pulumi import export
 import pulumi_aws as aws
 
 
-
-"""
-Résumé des blocs de code :
-
-1. Recherches de données (Data Lookups)
-   - Récupère la dernière AMI Amazon Linux 2 disponible.
-   - Récupère toutes les zones de disponibilité (AZ) de la région.
-
-2. Infrastructure réseau (VPC, IGW, table de routage)
-   - Crée un VPC avec un bloc CIDR défini.
-   - Crée une passerelle Internet pour le VPC.
-   - Crée une table de routage publique qui redirige le trafic vers l’IGW.
-
-3. Subnets multi-AZ et associations
-   - Crée des subnets publics dans jusqu’à 3 AZ.
-   - Associe chaque subnet à la table de routage publique.
-
-4. Groupes de sécurité
-   - Crée un groupe de sécurité pour les instances EC2, autorisant HTTP et ICMP.
-   - Crée un groupe de sécurité pour le load balancer, autorisant le trafic HTTP depuis Internet.
-
-5. Configuration du Load Balancer
-   - Crée un Application Load Balancer (ALB) accessible depuis Internet.
-   - Crée un Target Group pour enregistrer les instances EC2.
-   - Crée un Listener pour rediriger le trafic du LB vers le Target Group.
-
-6. Création des serveurs et attachement au Load Balancer
-   - Crée des instances EC2 dans chaque subnet public avec un script de démarrage.
-   - Attache chaque instance au Target Group du LB.
-   - Collecte les IP publiques et DNS des instances.
-
-7. Exports
-   - Exporte les adresses IP publiques, les noms DNS des instances et l’URL du load balancer.
-"""
-
-
-
-
 # --- 1. Data Lookups ---
 
 # Get the latest Amazon Linux 2 AMI
